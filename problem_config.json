@@ -1,7 +1,7 @@
 {
     "entry_point": "bin_packing_problem:BinPackingProblem",
     "default_params": {
-      "instance_file": "bin_packing/instances/t60_00.txt"
+      "instance_file": "instances/t60_00.txt"
     },
     "problem_type": "BinPacking",
     "description": "In the bin packing problem, a set of items with known weights must be assigned to bins with uniform capacity. The objective is to minimize the number of bins used while ensuring that the total weight in each bin does not exceed the bin capacity.",
