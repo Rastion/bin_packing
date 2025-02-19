@@ -5,12 +5,7 @@
     },
     "problem_type": "BinPacking",
     "description": "In the bin packing problem, a set of items with known weights must be assigned to bins with uniform capacity. The objective is to minimize the number of bins used while ensuring that the total weight in each bin does not exceed the bin capacity.",
-    "keywords": [
-      "bin packing",
-      "NP-hard",
-      "optimization",
-      "resource allocation"
-    ],
+    "keywords": ["bin packing", "combinatorial", "packing", "assignment", "optimization"],
     "data_format": {
       "instance_file": {
         "format": "First line: number of items. Second line: bin capacity. Following lines: weight for each item."
