@@ -1,35 +1,39 @@
 {
-    "entry_point": "bin_packing_problem:BinPackingProblem",
-    "default_params": {
-      "instance_file": "instances/t60_00.txt"
-    },
-    "problem_type": "BinPacking",
-    "description": "In the bin packing problem, a set of items with known weights must be assigned to bins with uniform capacity. The objective is to minimize the number of bins used while ensuring that the total weight in each bin does not exceed the bin capacity.",
-    "keywords": ["bin packing", "combinatorial", "packing", "assignment", "optimization"],
-    "data_format": {
-      "instance_file": {
-        "format": "First line: number of items. Second line: bin capacity. Following lines: weight for each item."
-      }
-    },
-    "decision_variables": {
-      "bin_assignment": {
-        "type": "list of int",
-        "description": "A list of length equal to the number of items. Each integer represents the bin index (0-indexed) assigned to the corresponding item."
-      }
-    },
-    "objective": {
-      "type": "minimization",
-      "function": "Number of bins used",
-      "description": "Minimize the number of bins used, defined as the count of unique bin indices in the solution. A solution is feasible if the total weight in each bin does not exceed the bin capacity."
-    },
-    "solution_representation": "A list of integers of length equal to the number of items, where each integer represents the assigned bin (0-indexed).",
-    "compatible_optimizers": [
-      "genetic_algorithm",
-      "simulated_annealing",
-      "particle_swarm",
-      "tabu_search",
-      "greedy"
-    ],
-    "notes": "Instances are taken from the Falkenauer instances in the BPPLIB. The lower bound on the number of bins is given by the ceiling of the total weight divided by the bin capacity."
+  "entry_point": "bin_packing_problem:BinPackingProblem",
+  "default_params": {
+    "instance_file": "instances/t60_00.txt"
+  },
+  "creator": "Rastion",
+  "type": "problem",
+  "problem_name": "Bin packing problem",
+  "description": "In the bin packing problem, a set of items with known weights must be assigned to bins with uniform capacity. The objective is to minimize the number of bins used while ensuring that the total weight in each bin does not exceed the bin capacity.",
+  "link_to_dataset": "https://github.com/Rastion/bin_packing/blob/main/instances/t120_00.txt",
+  "keywords": [
+    "bin packing",
+    "NP-hard",
+    "optimization",
+    "resource allocation",
+    "supply-chain"
+  ],
+  "data_format": {
+    "instance_file": {
+      "format": "First line: number of items. Second line: bin capacity. Following lines: weight for each item."
+    }
+  },
+  "decision_variables": {
+    "bin_assignment": {
+      "type": "list of int",
+      "description": "A list of length equal to the number of items. Each integer represents the bin index (0-indexed) assigned to the corresponding item."
+    }
+  },
+  "objective": {
+    "type": "minimization",
+    "function": "Number of bins used",
+    "description": "Minimize the number of bins used, defined as the count of unique bin indices in the solution. A solution is feasible if the total weight in each bin does not exceed the bin capacity."
+  },
+  "solution_representation": "A list of integers of length equal to the number of items, where each integer represents the assigned bin (0-indexed).",
+  "formulations": [
+    ""
+  ]
   }
   
